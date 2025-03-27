@@ -1,0 +1,22 @@
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 10px solid;
+  border-color: rgba(12, 11, 11, 0.15) rgba(17, 12, 12, 0.25) rgba(22, 13, 13, 0) rgba(15, 9, 9, 0.5);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  background-color: green;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
