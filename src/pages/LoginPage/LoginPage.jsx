@@ -1,10 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
+import LoginForm from "../../components/LoginForm/LoginForm";
 
 
 const RegistrationPage  = () => {
 
   return (
     <div >
+      <h2>Login</h2>
       <LoginForm />
     </div>
   );

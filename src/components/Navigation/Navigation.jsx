@@ -5,18 +5,18 @@ import css from './Navigation.module.css';
 import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
-  // const isLoggedIn = useSelector(selectIsLoggedIn);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <nav>
+    <nav className={css.wrapper}>
       <NavLink className={css.link} to="/">
         Home
       </NavLink>
-      {/* {isLoggedIn && ( */}
+      {isLoggedIn && (
         <NavLink className={css.link} to="/contacts">
           Phone list
         </NavLink>
-      {/* )} */}
+      )}
     </nav>
   );
 };

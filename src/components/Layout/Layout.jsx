@@ -1,12 +1,14 @@
-// import css from "./Loader.module.css";
+import css from "./Layout.module.css";
 
+import { Suspense } from "react";
 import AppBar from "../AppBar/AppBar";
 
 
-function Layout() {
+function Layout({children}) {
   return (
     <div>
-        <AppBar/>
+      <AppBar />
+      <Suspense fallback={null}>{children}</Suspense>
     </div>
   );
 }
