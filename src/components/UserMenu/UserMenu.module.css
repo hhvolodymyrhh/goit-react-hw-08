@@ -2,3 +2,17 @@
   display: flex;
   gap: 10px;
 }
+
+.button {
+  background: #007bff;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #0056b3;
+}

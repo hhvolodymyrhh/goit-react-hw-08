@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 
 const validationSchema = Yup.object().shape({
    email: Yup.string().email('Некоректний email').required('Обов’язкове поле'),
-  password: Yup.string().min(6, 'Мінімум 6 символів').required('Обов’язкове поле'),
+  password: Yup.string().min(7, 'Мінімум 7 символів').required('Обов’язкове поле'),
 });
 
 const LoginForm = () => {

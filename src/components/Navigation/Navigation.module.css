@@ -2,3 +2,17 @@
   display: flex;
   gap: 10px;
 }
+
+.link{
+  margin-right: 10px;
+
+}
+
+/* .link:last-child {
+  margin-right: 0px;
+} */
+
+.active {
+  color: green;
+  text-decoration: underline;
+}

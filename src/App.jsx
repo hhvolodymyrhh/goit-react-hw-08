@@ -8,11 +8,13 @@ import { PrivateRoute } from './PrivateRoute';
 
 import Layout from './components/Layout/Layout';
 import Loader from './components/Loader/Loader';
-import HomePage from './pages/HomePage/HomePage';
-import RegistrationPage from './pages/RegistrationPage/RegistrationPage ';
-import LoginPage from './pages/LoginPage/LoginPage';
-import ContactsPage from './pages/ContactsPage/ContactsPage';
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+const RegistrationPage = lazy(() => import('./pages/RegistrationPage/RegistrationPage '));
+const LoginPage = lazy(() => import('./pages/LoginPage/LoginPage'));
+const ContactsPage = lazy(() => import('./pages/ContactsPage/ContactsPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
+
 import { selectIsRefreshing } from './redux/auth/selectors';
 import { refreshUser } from './redux/auth/operations';
 
@@ -32,13 +34,7 @@ function App() {
    <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          
-          {/* на удаление проверочние 2 */}
-          <Route path="/register" element={<ContactsPage />} />
-          <Route path="/login" element={<LoginPage />} />
-            {/*  */}
-
-{/* 
+       
             <Route path="/register" element={
               <RestrictedRoute redirectTo="/contacts" component={<RegistrationPage />} />
             } />
@@ -51,9 +47,8 @@ function App() {
          
             <Route path="*" element={
               <RestrictedRoute redirectTo="*" component={<NotFoundPage />} />
-            } /> */}
+            } />
             
-          
         </Routes>
   </Suspense>
   </Layout>
