@@ -29,7 +29,9 @@ function App() {
 
 
 
-  return(
+  return isRefreshing ? (
+    <Loader />
+  ) : (
  <Layout>
    <Suspense fallback={<Loader />}>
         <Routes>
